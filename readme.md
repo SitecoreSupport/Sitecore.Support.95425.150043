@@ -1,5 +1,5 @@
 # Sitecore.Support.95425.150043
-The `English` language version of an item is always displayed when the search result is opened in the `New Content Editor` window from `List` or `Grid` view.
+The `English` language version of an item is always displayed when the search result is opened in the `New Content Editor` window from `List` or `Grid` view.<br/>
 This patch fixes the described behavior.
 
 ## License  
