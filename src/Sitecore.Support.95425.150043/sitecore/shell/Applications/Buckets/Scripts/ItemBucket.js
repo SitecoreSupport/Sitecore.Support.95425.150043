@@ -460,6 +460,8 @@ function renderGridView(data) {
                     htmlData += template.scFormat('BindItemResult(\'' + this.Path + '\'); toggleSelected(this); return false;', imageWidth, imageHeight, resizeTemplateIcon);
                     break;
                 default:
+                    //Sitecore.Support.150043
+                    //var onClick = 'scForm.getParentForm().postRequest(\'\',\'\',\'\',\'' + data.launchType + '(url=' + this.ItemId + ', la=' + this.Language + ', datasource=' + this.Datasource + ')\'); return false;';
                     var url = "";
                     if (data.launchType === 'search:launchresult') {
                         url = "sitecore://" + this.Uri.DatabaseName + "/" + this.ItemId + "?lang=" + this.Language;
@@ -467,6 +469,7 @@ function renderGridView(data) {
                         url = this.ItemId + ", la=" + this.Language;
                     }
                     var onClick = 'scForm.getParentForm().postRequest(\'\',\'\',\'\',\'' + data.launchType + '(url=' + url + ', datasource=' + this.Datasource + ')\'); return false;';
+
                     htmlData += template.scFormat(onClick, imageWidth, imageHeight, resizeTemplateIcon, (languageCount > 1) ? ' (' + languageCount + ')' : '');
             }
         });
