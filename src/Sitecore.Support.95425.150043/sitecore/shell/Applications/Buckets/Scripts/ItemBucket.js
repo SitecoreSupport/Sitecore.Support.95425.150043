@@ -460,7 +460,7 @@ function renderGridView(data) {
                     htmlData += template.scFormat('BindItemResult(\'' + this.Path + '\'); toggleSelected(this); return false;', imageWidth, imageHeight, resizeTemplateIcon);
                     break;
                 default:
-                    //Sitecore.Support.150043
+                    //Sitecore.Support.150043  
                     //var onClick = 'scForm.getParentForm().postRequest(\'\',\'\',\'\',\'' + data.launchType + '(url=' + this.ItemId + ', la=' + this.Language + ', datasource=' + this.Datasource + ')\'); return false;';
                     var url = "";
                     if (data.launchType === 'search:launchresult') {
